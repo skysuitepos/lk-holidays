@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sri Lankan holidays for one year",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["uid", "summary", "categories", "start", "end"],
+    "properties": {
+      "uid": { "type": "string", "pattern": "^sl_[0-9]+$" },
+      "summary": { "type": "string", "minLength": 1 },
+      "categories": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "enum": ["Public", "Bank", "Mercantile", "Poya"] }
+      },
+      "start": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+      "end": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+    }
+  }
+}
