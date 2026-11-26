@@ -5,11 +5,11 @@ A free, static JSON API for Sri Lankan public, bank and mercantile holidays and 
 ## Usage
 
 ```
-GET https://<username>.github.io/lk-holidays/{year}.json
+GET https://skysuitepos.github.io/lk-holidays/{year}.json
 ```
 
 ```bash
-curl https://<username>.github.io/lk-holidays/2026.json
+curl https://skysuitepos.github.io/lk-holidays/2026.json
 ```
 
 ```js
